@@ -222,10 +222,10 @@ ${i}`),b(i)}function $e(n,e=!1){return Ko(zo(n),An(),Pn(),e)}class Yo extends fe
 
 #page>header { font-weight: bold; color: #fff; }
 
-#page>header { border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
-
 #page>article { 
   color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
   text-align: justify; font-size: 0.9em; line-height: 1.4em; }
 
 #page .link { 
@@ -238,8 +238,7 @@ ${i}`),b(i)}function $e(n,e=!1){return Ko(zo(n),An(),Pn(),e)}class Yo extends fe
   color: #666; text-decoration: none; 
   background-color: rgba(255, 255, 255, 0.8); }
 
-#page>footer { 
-  border-top: 1px solid rgba(255, 255, 255, 0.8);
+#page>footer {   
   color: #fff; }
 
 footer .left { 
@@ -247,6 +246,11 @@ footer .left {
 
 theme-switcher { display: none !important; }
 
+@media screen and (max-width: 768px) {
+    #page {        
+        min-height: 90vh;        
+    }
+}
 
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="good" color="green"></tw-tag><tw-passagedata pid="1" name="0" tags="" position="500,225" size="100,100">config.header.left: &#39;&amp;nbsp;&#39;
