@@ -238,15 +238,24 @@ ${i}`),b(i)}function $e(n,e=!1){return Ko(zo(n),An(),Pn(),e)}class Yo extends fe
   font-weight: bold; padding: 2px 5px; margin: -2px;
   transition: background-color 1.5s ease-in-out; }
 
-#page .link:hover, footer a:hover { 
+#page .link:hover, #page>footer .link:hover, footer a:hover { 
   font-weight: bold;
   color: #666; text-decoration: none; 
-  background-color: rgba(255, 255, 255, 0.9); }
+  background-color: rgba(255, 255, 255, 0.9); 
+  transition: background-color 1.5s ease-in-out; }
 
-#page>footer { color: #fff; }
+#page>footer .link, footer a { /* footer RESTART & AO3 */  
+  color: white;
+  padding: 2px 5px;
+  text-decoration-color: white;
+  font-size: 18px;
+  font-variant: small-caps;
+  font-style: normal;
+  letter-spacing: -1px;
+  font-family: var(--page-font-family); 
+  transition: background-color 1.5s ease-in-out;} 
 
-footer .right { 
-  font-style:italic; font-size: 0.9em; }
+
 
 theme-switcher { display: none !important; }
 
@@ -259,7 +268,7 @@ theme-switcher { display: none !important; }
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">config.style.page.theme.override = 'light';
 config.footer.left = '<restart-link class="link" tabindex="0" role="button">Restart</restart-link>';
-config.footer.right = '<a href="https://archiveofourown.org/comments/show_comments?work_id=67589561" target="_blank" title="back to ao3">BACK TO AO3<a/>';</script><tw-tag name="good" color="green"></tw-tag><tw-tag name="bad" color="red"></tw-tag><tw-passagedata pid="1" name="0" tags="" position="500,350" size="100,100">config.header.left: &#39;&amp;nbsp;&#39;
+config.footer.right = '<a href="https://archiveofourown.org/comments/show_comments?work_id=67589561" target="_blank" title="back to ao3">back to ao3<a/>';</script><tw-tag name="good" color="green"></tw-tag><tw-tag name="bad" color="red"></tw-tag><tw-passagedata pid="1" name="0" tags="" position="500,350" size="100,100">config.header.left: &#39;&amp;nbsp;&#39;
 comment: &#39;https://archiveofourown.org/comments/show_comments?work_id=67589561&#39;
 --
 
