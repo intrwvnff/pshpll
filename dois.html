@@ -31,8 +31,24 @@ img {
 
 hr { border-color: #b7b7b7; }
 
+.header{
+  display: flex;
+  justify-content: space-between; /* push left & right to edges */
+  align-items: center;           /* vertically center items */
+  position: relative;            /* needed for absolute center */
+}
+
+/* Center element positioned absolutely in the middle */
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Left and right keep their natural position with flexbox */
+
 .refs { color: #e1e1e1; cursor: text; font-weight: normal; }
-.refsFound { color: #e1e1e1; cursor: pointer; font-weight: bold; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="0" tags="" position="600,200" size="100,100">---
+.refsFound { color: #e1e1e1; cursor: pointer; font-weight: bold; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="600,200" size="100,100">---
 
 &lt;img src=&quot;https://intrwvnff.github.io/pshpll/res/cassetteA.png&quot; alt=&quot;Static cassette tape labeled Push &amp; Pull&quot;&gt;
 
@@ -50,13 +66,10 @@ hr { border-color: #b7b7b7; }
 
 
 
-</tw-passagedata><tw-passagedata pid="2" name="init" tags="" position="125,250" size="100,100">(set: $refsFound to 0)
-
+</tw-passagedata><tw-passagedata pid="2" name="init" tags="" position="600,50" size="100,100">(set: $refsFound to 0)(set: $headerLeft to &#39;&#39;)(set: $headerCenter to &#39;&#39;)(set: $headerRight to &#39;&#39;)
 (set: $ref01 to
 &quot;(if: $refsFound is 0)[(link: &#39;&lt;span class=\&quot;refs\&quot;&gt;If he pulls the wool back from his eyes&lt;/span&gt;&#39;)[(set: $refsFound to it + 1)&lt;span class=\&quot;refsFound\&quot;&gt;If he pulls the wool back from his eyes&lt;/span&gt; (RR refs found: $refsFound)]](else:)[&lt;span class=\&quot;refsFound\&quot;&gt;If he pulls the wool back from his eyes&lt;/span&gt; (RR refs found:$refsFound)]&quot;
-)
-
-</tw-passagedata><tw-passagedata pid="3" name="start" tags="" position="600,325" size="100,100">---
+)</tw-passagedata><tw-passagedata pid="3" name="start" tags="" position="600,325" size="100,100">---
 
 &lt;img src=&quot;https://intrwvnff.github.io/pshpll/res/spinningcassetteB.gif&quot; alt=&quot;Animated cassette tape labeled Push &amp; Pull - Part II&quot;&gt;
 
@@ -72,12 +85,13 @@ Nothing. No message from who he’d been hoping for.
 
 He mulls over his options.
 
-He could [[text him-&gt;Jacob]], hoping they might still share a nightcap. After all, they are both off for the weekend. Today’s scenes had pulled them in all sorts of different directions, barely crossing paths, and it left a strange kind of emptiness trailing behind. Maybe this is the chance he’s been waiting all day to reclaim some time together. 
+He could [[text him]], hoping they might still share a nightcap. After all, they are both off for the weekend. Today’s scenes had pulled them in all sorts of different directions, barely crossing paths, and it left a strange kind of emptiness trailing behind. Maybe this is the chance he’s been waiting all day to reclaim some time together. 
 
 Or maybe he should take the hint and let it go. If his friend wanted his company, he would have stayed. And maybe that’s enough. That sometimes the best way to care is to step back, without making a fuss or adding weight where none is wanted.
 
 ---
-(link-goto: &quot;back&quot;, &quot;0&quot;) | (link:&quot;restart&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="4" name="Jacob" tags="" position="600,450" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[(display: &quot;header&quot;)]
+(link-goto: &quot;back&quot;, &quot;0&quot;) | (link:&quot;restart&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="4" name="text him" tags="" position="600,450" size="100,100">(set: $headerCenter to &quot;Jacob&quot;)
+(display: &quot;header&quot;)
 
 Too used to their end-of-the-day little ritual, Jacob refuses to accept defeat. He pulls up Sam&#39;s contact on his message app. It isn&#39;t even about having dinner plans. The day simply doesn&#39;t feel complete unless he&#39;s spent quality time with Sam.
 
@@ -135,8 +149,11 @@ If Sam were to ask anything of him, he wouldn’t be able to say no. He wouldn�
 Should he try to [[rewrite]] what they are into what he thinks they should be? Or should he [[resist]] and settle for this place where nothing is lost and nothing is risked, so long as he never dares to want more than what’s already been given? 
 
 ---
-(link-goto: &quot;back&quot;, &quot;start&quot;) | (link:&quot;restart&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="5" name="rewrite" tags="" position="537.5,575" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="resist" tags="" position="662.5,575" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="header" tags="foot" position="350,275" size="100,100">Jacob
-
+(link-goto: &quot;back&quot;, &quot;start&quot;) | (link:&quot;restart&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="5" name="rewrite" tags="" position="537.5,575" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="resist" tags="" position="662.5,575" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="header" tags="foot" position="350,275" size="100,100">&lt;div class=&quot;header&quot;&gt;
+  &lt;div class=&quot;left&quot;&gt;$headerLeft&lt;/div&gt;
+  &lt;div class=&quot;center&quot;&gt;$headerCenter&lt;/div&gt;
+  &lt;div class=&quot;right&quot;&gt;$headerRight&lt;/div&gt;
+&lt;/div&gt;
 ---</tw-passagedata><tw-passagedata pid="8" name="footer" tags="" position="350,425" size="100,100">---
 (link-goto: &quot;back&quot;, &quot;0&quot;) | (link:&quot;Enter the hole&quot;)[(restart:)]
 
