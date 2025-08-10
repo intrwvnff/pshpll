@@ -47,7 +47,14 @@ hr { border-color: #b7b7b7; }
 
 /* Left and right keep their natural position with flexbox */
 
-.footer a { color:#ff0; }
+.footer a, .footer tw-link{
+  color: white;
+  font-variant: small-caps;
+  padding: 2px 5px; font-weight: bold;
+  font: 100% Georgia, serif;
+  transition: background-color 1.5s ease-in-out;  
+}
+.footer a:hover { color: #666; background-color: white; }
 
 .refs { color: #e1e1e1; cursor: text; font-weight: normal; }
 .refsFound { color: #e1e1e1; cursor: pointer; font-weight: bold; }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="600,200" size="100,100">(display:&quot;init&quot;)
@@ -98,8 +105,9 @@ He could [[text him]], hoping they might still share a nightcap. After all, they
 
 Or maybe he should take the hint and let it go. If his friend wanted his company, he would have stayed. And maybe that’s enough. That sometimes the best way to care is to step back, without making a fuss or adding weight where none is wanted.
 
----
-(link-goto: &quot;back&quot;, &quot;0&quot;) | (link:&quot;restart&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="4" name="text him" tags="" position="600,450" size="100,100">(set: $headerCenter to &quot;Jacob&quot;)
+(set: $footerLeft to $backBtn)
+(set: $footerCenter to $restartBtn)
+(display:&quot;footer&quot;)</tw-passagedata><tw-passagedata pid="4" name="text him" tags="" position="600,450" size="100,100">(set: $headerCenter to &quot;Jacob&quot;)
 (display: &quot;header&quot;)
 
 Too used to their end-of-the-day little ritual, Jacob refuses to accept defeat. He pulls up Sam&#39;s contact on his message app. It isn&#39;t even about having dinner plans. The day simply doesn&#39;t feel complete unless he&#39;s spent quality time with Sam.
